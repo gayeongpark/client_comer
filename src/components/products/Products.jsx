@@ -4,11 +4,12 @@ import { BsHeartFill } from "react-icons/bs";
 import { AiOutlineLeft } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import ProductsSK from "./ProductsSK";
 
 export default function Products() {
   // Define a state variable "newProductData" and its updater function "setNewProductData"
   const [newProductData, setNewProductData] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   // Function to handle sliding images left or right
   // It takes two parameters direction and index
   // direction is a string that specifies the direction of the slid(l: left, r: right)
@@ -56,8 +57,9 @@ export default function Products() {
             slideNumber: 0, // Initialize the slide number to 0
           }))
         );
+        setIsLoading(false);
       } catch (error) {
-        console.error(error);
+        setIsLoading(true);
       }
     }
     fetchData(); // Call the fetchData function when this component is mounted
