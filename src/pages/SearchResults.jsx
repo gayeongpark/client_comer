@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import Profile from "../components/Profile/Profile";
+import Search from "../components/Search/Search";
 import Footer from "../components/Footer/Footer";
 
-export default function MyProfile() {
+export default function SearchResults() {
   return (
     <div>
       <Navbar />
-      <Profile />
+      <Search />
       <Footer />
     </div>
   );

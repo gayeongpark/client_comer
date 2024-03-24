@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import Profile from "../components/Profile/Profile";
+import EmailVerification from "../components/Auth/EmailVerification";
 import Footer from "../components/Footer/Footer";
 
-export default function MyProfile() {
+export default function VerifiedEmail() {
   return (
     <div>
+      hello
       <Navbar />
-      <Profile />
+      <EmailVerification />
       <Footer />
     </div>
   );

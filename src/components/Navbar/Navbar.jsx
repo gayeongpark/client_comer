@@ -6,11 +6,11 @@ import {
   // BellIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import axios from "axios";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { setAuthUser } from "../../redux/authSlice";
 import { useSelector } from "react-redux";
+import jwtInterceptor from "../../interceptors/axios";
 
 // Utility function to handle CSS classes
 // The classNames function is used in the code I provided to generate a string of CSS class names for an element, allowing me to conditionally apply classes based on certain conditions.
@@ -28,19 +28,19 @@ export default function Navbar() {
   const logout = async () => {
     try {
       // Send a logout request to the server
-      const loggedOut = await axios.post("/auth/logout", {
+      const loggedOut = await jwtInterceptor.post("/auth/logout", {
         headers: { "content-Type": "application/json" },
         withCredentials: true,
       });
-      if (loggedOut) {
+      if (loggedOut.status === 200) {
         // Update the Redux state to indicate the user is no longer authenticated
-        dispatch(setAuthUser(loggedOut));
+        dispatch(setAuthUser(false));
         // Redirect the user to the login page
-        navigate("/login");;
+        navigate("/login");
       }
     } catch (error) {
       // If logout fails, update the Redux state accordingly
-      dispatch(setAuthUser(false));
+      console.error("Logout request failed with error:", error);
     }
   };
 
@@ -184,7 +184,7 @@ export default function Navbar() {
                                         "block px-4 py-2 text-sm text-gray-700"
                                       )}
                                     >
-                                      Your experineces
+                                      Your experience
                                     </div>
                                   )}
                                 </Menu.Item>

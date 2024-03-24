@@ -12,7 +12,7 @@ export default function Login() {
   const [open, setOpen] = useState(false); // Used to toggle password visibility
 
   const [email, setEmail] = useState("");
-  const [password, setPassowrd] = useState("");
+  const [password, setPassword] = useState("");
 
   const [error, setError] = useState("");
 
@@ -42,7 +42,7 @@ export default function Login() {
       // console.log(user);
       // Dispatch an action to update the user's authentication status in Redux
       dispatch(setAuthUser(user));
-      //coverting setAuthUser(false) into (true)
+      //converting setAuthUser(false) into (true)
       // authUser(user);
       //containing user in authUser selector
       navigate("/"); // Redirect the user to the homepage
@@ -102,7 +102,7 @@ export default function Login() {
                 name="password"
                 id="password"
                 autoComplete="off"
-                onChange={(e) => setPassowrd(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 className="block w-full rounded-md border-0 py-2 px-3.5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-700"
                 required
               />

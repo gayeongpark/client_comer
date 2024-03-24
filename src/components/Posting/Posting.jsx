@@ -9,6 +9,8 @@ import jwtInterceptor from "../../interceptors/axios";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import "mapbox-gl/dist/mapbox-gl.css";
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css files
 
 export default function Posting() {
   const navigate = useNavigate();
@@ -33,8 +35,10 @@ export default function Posting() {
     { value: "English", label: "English" },
     { value: "Korean", label: "Korean" },
     { value: "Spanish", label: "Spanish" },
-    { value: "Franch", label: "Franch" },
+    { value: "French", label: "French" },
     { value: "Chinese", label: "Chinese" },
+    { value: "German", label: "German" },
+    { value: "Japanese", label: "Japanese" },
   ];
 
   const customStyles = {
@@ -296,7 +300,7 @@ export default function Posting() {
                   Title
                 </label>
                 <div className="text-gray-500">
-                  please input the catched title of your activity
+                  please input the title of your activity
                 </div>
                 <input
                   type="text"
@@ -508,7 +512,7 @@ export default function Posting() {
               <br />
               {petsAllowed && "Guest can bring their pets"}
               <br />
-              {maxGuest && `Maximun group size: ${maxGuest} persons`}
+              {maxGuest && `Maximum group size: ${maxGuest} persons`}
             </dd>
 
             <div
@@ -662,7 +666,7 @@ export default function Posting() {
             )}
           </div>
 
-          {/* General availiability */}
+          {/* General availability */}
           <div className="px-4 py-10 border-b sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
             <dt className="text-sm font-medium text-gray-500">
               General availability
@@ -1004,7 +1008,7 @@ export default function Posting() {
                   htmlFor="country"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  country
+                  Country
                 </label>
                 <input
                   type="text"
