@@ -2,7 +2,7 @@
 
 "Comer," a web application, is LANTANA's innovative project for the Web Development Basics with JavaScript course at QUEST program, CODE University of Applied Sciences. The platform bridges cultures through the love of food, enabling users to share and book unique culinary experiences.
 
-**Deployed URL**: [Comer Experience Web](https://comer-experience-app.onrender.com)
+**Deployed URL**: [Comer Web Application](https://comer-app.onrender.com)
 
 ## Project Setup
 
@@ -16,7 +16,7 @@
 Clone the repository and install dependencies:
 
 ```bash
-git clone [https://github.com/gayeongpark/comer_client.git]
+git clone [https://github.com/gayeongpark/client_comer.git]
 cd comer_client
 npm install
 ```
@@ -47,14 +47,6 @@ npm run build
 
 Builds the app for production to the `build` folder, optimizing the build for performance. The build is minified, and filenames include hashes.
 
-#### Ejecting Configuration (Advanced)
-
-```bash
-npm run eject
-```
-
-**Note**: This is irreversible. Ejecting exposes configuration files and dependencies for customization.
-
 ## Project Overview
 
 ### Key Features
@@ -82,4 +74,5 @@ npm run eject
 - Social login/signup options using Firebase.
 - Enhanced security measures.
 - Expanded platform functionality and reach.
+
 # client_comer
