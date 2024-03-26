@@ -50,7 +50,7 @@ export default function Header() {
     e.preventDefault(); // Prevent default form submission behavior
     if (!cityName.trim()) {
       // If cityName is empty or whitespace, alert an error message
-      alert('Please enter a city name!');
+      alert("Please enter a city name!");
       return; // Exit the function to prevent further execution
     }
     // Check if cityName needs transformation
@@ -147,7 +147,7 @@ export default function Header() {
                 {/* </section> */}
                 <button
                   type="submit"
-                  className="ml-3 p-4 bg-red-600 text-white rounded-full hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2"
+                  className="ml-3 p-4 bg-red-700 text-white rounded-full hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-700 focus:ring-offset-2"
                 >
                   <GoSearch className="text-white font-bold text-xl" />
                 </button>
