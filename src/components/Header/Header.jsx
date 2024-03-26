@@ -48,6 +48,11 @@ export default function Header() {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission behavior
+    if (!cityName.trim()) {
+      // If cityName is empty or whitespace, alert an error message
+      alert('Please enter a city name!');
+      return; // Exit the function to prevent further execution
+    }
     // Check if cityName needs transformation
     const needsTransformation =
       cityName !==
