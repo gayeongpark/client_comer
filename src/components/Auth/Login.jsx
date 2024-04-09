@@ -48,6 +48,7 @@ export default function Login() {
       navigate("/"); // Redirect the user to the homepage
     } catch (error) {
       setError(error.response.data);
+      alert("login failed, please try again")
       // Dispatch an action to update the user's authentication status to false in Redux
       dispatch(setAuthUser(false));
     }

@@ -517,15 +517,17 @@ export default function DetailedProduct() {
                           zoom: 15,
                         }}
                         style={{ width: 600, height: 400 }}
-                        mapStyle="mapbox://styles/mapbox/streets-v11"
+                        mapStyle="mapbox://styles/mapbox/streets-v12"
                       >
                         <Marker
                           longitude={detailedProductData?.experience?.longitude}
                           latitude={detailedProductData?.experience?.latitude}
                           anchor="bottom"
-                          zoom={15}
+                          zoom={30}
                         >
-                          <MdLocationOn />
+                          <MdLocationOn 
+                          style={{ width: "40px", height: "40px" }}
+                          />
                         </Marker>
                         <NavigationControl />
                       </Map>
