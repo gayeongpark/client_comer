@@ -26,6 +26,9 @@ export default function EmailVerification() {
             withCredentials: true,
           }
         );
+        if (emailVerifiedData.status === 200) {
+          console.log("good");
+        }
         // Extract the verified user data from the response
         const verifiedUserData = emailVerifiedData.data;
         // Dispatch the verified user data to the Redux store for state management

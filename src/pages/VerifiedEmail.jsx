@@ -6,7 +6,6 @@ import Footer from "../components/Footer/Footer";
 export default function VerifiedEmail() {
   return (
     <div>
-      hello
       <Navbar />
       <EmailVerification />
       <Footer />
