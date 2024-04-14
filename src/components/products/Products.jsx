@@ -51,13 +51,13 @@ export default function Products() {
         });
         const products = response.data; // Extract and save the product data from the response
         // Update the state with the product data, adding a "slideNumber" property
+        setIsLoading(false);
         setNewProductData(
           products.map((product) => ({
             ...product,
             slideNumber: 0, // Initialize the slide number to 0
           }))
         );
-        setIsLoading(false);
       } catch (error) {
         setIsLoading(true);
       }
@@ -116,7 +116,9 @@ export default function Products() {
                             src={product.files[product.slideNumber]}
                             alt="experiencesImage"
                             className="absolute block w-full h-full"
+                            loading="lazy" // Add this attribute
                           />
+
                           <div className="hidden group-hover:flex group-hover:opacity-100 mx-1 absolute top-0 bottom-0 left-0 items-center">
                             <button
                               onClick={() => {
