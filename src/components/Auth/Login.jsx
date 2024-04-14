@@ -13,7 +13,7 @@ export default function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
 
   const navigate = useNavigate(); // Get the navigation function for routing
@@ -28,6 +28,8 @@ export default function Login() {
   const handleSubmit = async (event) => {
     try {
       event.preventDefault(); // It is to avoid to reload the page
+      // Display a notification indicating that login is in progress
+      setSuccess("Logging in now, please hold on...");
       const params = {
         email,
         password,
@@ -47,8 +49,14 @@ export default function Login() {
       //containing user in authUser selector
       navigate("/"); // Redirect the user to the homepage
     } catch (error) {
-      setError(error.response.data);
-      alert("login failed, please try again")
+      // If an error occurs, handle it here
+      if (error.response) {
+        // If the server returns an error response, extract the error message
+        setError(error.response.data.error);
+      } else {
+        // If no response is received from the server, handle it accordingly
+        setError("An error occurred. Please try again later.");
+      }
       // Dispatch an action to update the user's authentication status to false in Redux
       dispatch(setAuthUser(false));
     }
@@ -117,6 +125,9 @@ export default function Login() {
             </div>
           </div>
         </div>
+        {/* Success and error messages */}
+        {success && <div className="text-red-600 mt-2">{success}</div>}
+        {error && <div className="text-red-600 mt-2">{error}</div>}
         <div className="mt-10">
           <button
             type="submit"
