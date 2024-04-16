@@ -95,7 +95,7 @@ export default function BookedExperience() {
                       {booking.startTime} - {booking.endTime}
                     </p>
                     {/* If user clicks the title, user will be navigated to the detailed page */}
-                    <Link to={`/product/${booking.experienceId}`}>
+                    <Link to={`/product/${bookingGroup.experienceId}`}>
                       <p className="flex text-2xl items-center justify-center">
                         {booking.experienceTitle}
                       </p>

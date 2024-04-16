@@ -5,8 +5,8 @@ import axios from "axios";
 
 const jwtInterceptor = axios.create({
   baseURL:
-  //  "http://localhost:8000",
-  "https://comer-experience-app-server.onrender.com", // Replace with your server's base URL
+   "http://localhost:8000",
+  // "https://comer-experience-app-server.onrender.com", // Replace with your server's base URL
   withCredentials: true, // Send cookies with every request
 });
 
