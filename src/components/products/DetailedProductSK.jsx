@@ -27,39 +27,6 @@ export default function DetailedProductSK() {
           <div className="bg-gray-300 h-6 w-16 rounded-md mr-2"></div>
           <div className="bg-gray-300 h-6 w-16 rounded-md mr-2"></div>
         </div>
-
-        {/* Description and details placeholders */}
-        <div className="mt-6">
-          <div className="bg-gray-300 h-4 w-3/4 rounded-md mb-2"></div>
-          <div className="bg-gray-300 h-4 w-full rounded-md mb-2"></div>
-          <div className="bg-gray-300 h-4 w-5/6 rounded-md"></div>
-        </div>
-
-        {/* Perks placeholders */}
-        <div className="mt-6">
-          {/* <h3 className="bg-gray-400 h-6 rounded-md w-1/4 mb-2"></h3> */}
-          <div className="flex gap-4">
-            {/* <GiForkKnifeSpoon className="text-gray-400" />
-            <GiSodaCan className="text-gray-400" />
-            <GiCookingPot className="text-gray-400" />
-            <BiDrink className="text-gray-400" /> */}
-          </div>
-        </div>
-
-        {/* Location and Things to know placeholders */}
-        <div className="mt-6">
-          {/* <MdLocationOn className="text-gray-400" /> */}
-          <div className="bg-gray-300 h-4 w-3/4 rounded-md my-2"></div>
-          {/* <FaBaby className="text-gray-400" />
-          <MdOutlinePets className="text-gray-400" />
-          <BsPeopleFill className="text-gray-400" /> */}
-        </div>
-
-        {/* Comments placeholder */}
-        <div className="mt-6">
-          {/* <h3 className="bg-gray-400 h-6 rounded-md w-1/4 mb-2"></h3> */}
-          <div className="bg-gray-300 h-12 rounded-lg"></div>
-        </div>
       </div>
     </div>
   );
